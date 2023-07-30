@@ -86,18 +86,19 @@ function Board({ nrows = 5, ncols = 5, chanceLightStartsOn = .5 }) {
     hasWon() ?  <h1>WINNER</h1> :
       // make table board
       <table>
-        {board.map((row, rIdx) => {
-          return (
-            <tr>
-            { row.map((cell, cIdx) => {
-              return <Cell flipCellsAroundMe={()=>flipCellsAround(`${rIdx}-${cIdx}`)} isLit={board[rIdx][cIdx]}/>
-            })}
-            </tr>
+        <tbody>
+          {board.map((row, rIdx) => {
+            return (
+              <tr>
+              { row.map((cell, cIdx) => {
+                return <Cell flipCellsAroundMe={()=>flipCellsAround(`${rIdx}-${cIdx}`)} isLit={board[rIdx][cIdx]}/>
+              })}
+              </tr>
             )
-        })}
+          })}
+        </tbody>
       </table>
     )
-  
 }
 
 export default Board;
