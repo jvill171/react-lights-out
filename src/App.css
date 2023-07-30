@@ -1,3 +1,25 @@
-.App {
+body{
+  display: flex;
+  justify-content: center;
+  /* Set some background color and dimensions for visualization */
+  height: 100vh;
+  width: 99vw;
+  margin: 0;
+  background-color: hsl(266, 25%, 70%);
+}
+
+.App{
   text-align: center;
+  padding: 15px;
+}
+
+.App > table {
+  background-color: hsl(248, 39%, 60%);
+}
+
+.App > h1{
+  background-color: yellow;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px yellow;
 }
